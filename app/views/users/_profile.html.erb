@@ -2,6 +2,10 @@
   <div class="icon">
     <%= gravatar_for user, size: 100 %>
   </div>
+    <% content_for :head do %>
+      <title><%= user.name %>-monolist</title>
+          <meta name="description" content="<%= user.name %>のモノページ。Hanakoの欲しいモノ、持ってるモノを表示しています。"/>
+    <% end %>
   <div class="name">
     <h1><%= user.name %><h1>
   </div>
